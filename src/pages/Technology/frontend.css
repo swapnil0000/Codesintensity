@@ -1,0 +1,20 @@
+@keyframes go-left-right {        /* give it a name: "go-left-right" */
+    from { left: 0px; }             /* animate from left: 0px */
+    to { left: calc(100% - 150px); } /* animate to left: 100%-50px */
+  }
+
+  .progress {
+    animation: go-left-right 3s infinite alternate;
+    /* apply the animation "go-left-right" to the element
+       duration 3 seconds
+       number of times: infinite
+       alternate direction every time
+    */
+
+    position: relative;
+    border: 2px solid rgb(206, 33, 33);
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    background:#141415;
+  }
