@@ -17,14 +17,18 @@ const Contact = () => {
       <source src={contact} type='video/mp4' />
       Your browser does not support the video tag.
     </video>
-    <Box sx={{ position: 'absolute', bottom:'40%', transform: 'translate(-50%, 100%)', color: 'white', fontSize: '24px', animation: 'moveUp 3s forwards' }}>
-      <Typography sx={{ fontSize:isMobileView?"50px":"100px", width: '950px', fontFamily: 'Montserrat', fontWeight: '700', textAlign: 'center' }}>GET IN TOUCH</Typography>
+    <Box sx={{ position: 'absolute', bottom:isMobileView?"35%":"40%", transform: 'translate(-50%, 100%)', color: 'white', fontSize: '24px', animation: 'moveUp 3s forwards' }}>
+      <Typography sx={{ fontSize:isMobileView?"40px":"100px", width: '950px', fontFamily: 'Montserrat', fontWeight: '700', textAlign: 'center' }}>GET IN TOUCH</Typography>
     </Box>
   </Box>
    <Container sx={{display:'flex',alignItems:'center',justifyContent:'center',width:'100%',flexDirection:'column',marginTop:'20px'}}>
-    <Box  sx={{width:'100%',backgroundImage: `url(${contactimgage})`, backgroundSize: 'cover',height:'auto',display:'flex',flexDirection:isMobileView?"column":"row",alignItems:'center',justifyContent:'space-evenly',padding:'10px'}}>
+    <Box  sx={{width:'100%',backgroundImage: `url(${contactimgage})`, backgroundSize: 'cover',height:'auto',display:'flex',flexDirection:isMobileView?"column":"row",alignItems:'center',justifyContent:'space-evenly',padding:'10px',borderRadius:'20px'}}>
      <img style={{width:'500px',height:isMobileView?"300px":"400px",borderRadius:'20px'}} src={contactimg}/>
      <Form/>
+
+     <Box>
+      
+     </Box>
     </Box>
     <Box sx={{display:'flex',flexDirection:isMobileView?"column":"row",alignItems:'center',justifyContent:'space-around',width:'100%',margin:'20px'}}>
      <Typography sx={{color:'#666',fontSize:isMobileView?"20px":"30px",fontWeight:'900'}}><CallIcon sx={{marginRight:'10px',color:'#f91942',fontSize:'30px'}}/>+91 6386455982</Typography>

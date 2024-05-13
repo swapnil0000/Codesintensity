@@ -4,9 +4,10 @@ import black from "../Industry/backgroundfeature.jpg"
 import education from "../Industry/educational.jpg"
 import ecommerce from "../Industry/ecommerce.jpg"
 import res from "../Industry/restaurant.jpg"
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 const Industry = () => {
     const theme=useTheme();
+    const navigate=useNavigate();
     const isMobileView=useMediaQuery(theme.breakpoints.down("md"))
     // const { pathname } = useLocation();
 
@@ -30,7 +31,7 @@ const Industry = () => {
         },
     ]
     return (
-        <div style={{ backgroundImage: `url(${black})`, backgroundSize: 'cover', height:isMobileView?"auto":"auto", padding: '20px' ,objectFit:'cover',marginBottom:"20px"}}>
+        <div style={{ backgroundImage: `url('/assets/feature.webp')`, backgroundSize: 'cover', height:isMobileView?"auto":"auto", padding: '20px' ,objectFit:'cover',marginBottom:"20px"}}>
         <Container sx={{ display: 'flex', flexDirection: isMobileView ? "column" : "column", alignItems: 'center', justifyContent: 'center', width: '100%', marginBottom: '20px' }}>
             <Box sx={{ display: 'flex', flexDirection: 'column',alignItems:'center',justifyContent:'center' }}>
                 <Typography sx={{ fontSize: isMobileView?"25px":'40px', fontWeight: '900', fontFamily: 'montserrat', color: '#666',marginTop:'30px' }}>INDUSTRIES <span style={{ color: '#f91942' }}>SERVED!</span></Typography>
@@ -39,15 +40,15 @@ const Industry = () => {
 
             <Box sx={{display:'flex',flexDirection:isMobileView?"column":'row',alignItems:'center',justifyContent:'space-between',width:'100%',marginTop:'20px'}}>
               {data.map((ele)=>(
-                <Paper elevation={2} key={ele.id} sx={{gap:'30px',backgroundColor:'white',margin:'10px'}}>
+                <Paper elevation={2} key={ele.id} sx={{gap:'30px',backgroundColor:'#151922',margin:'10px'}}>
                 <Box sx={{gap:'20px',display:'flex',flexDirection:"column"}}>
                   <img style={{width:'100%'}} src={ele.img} alt={ele.tittle}/>
-                  <Typography sx={{fontSize:'23px',fontWeight:'700',fontFamily:'montserrat',color:'#666',textAlign:'center'}}>{ele.tittle}</Typography>
+                  <Typography sx={{fontSize:'23px',fontWeight:'700',fontFamily:'montserrat',color:'whitesmoke',textAlign:'center',padding:'10px'}}>{ele.tittle}</Typography>
                   </Box>
                 </Paper>
               ))}
             </Box>
-            <Button variant='contained' sx={{margin:'30px',backgroundColor:'red',width:'100px'}}>MORE</Button>
+            <Button onClick={()=>navigate('/industry')} variant='contained' sx={{margin:'30px',backgroundColor:'red',width:'100px'}}>MORE</Button>
         </Container>
         </div>
     )

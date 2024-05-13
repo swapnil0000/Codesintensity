@@ -15,8 +15,9 @@ const Home = () => {
      <HomeAbout/>
      <Feature/>
      <Choose/>
-     <TechStack/>
      <Industry/>
+     <TechStack/>
+   
     </Box>
   )
 }

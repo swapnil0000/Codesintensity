@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useEffect } from 'react'
 import DoneIcon from '@mui/icons-material/Done';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import web from "../webdevelopment/web.jpg"
 import CircleIcon from '@mui/icons-material/Circle';
 import html from "../webdevelopment/html.webp"
@@ -84,6 +84,7 @@ const Web = () => {
    
 
     const { pathname } = useLocation();
+    const navigate=useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -92,21 +93,20 @@ const Web = () => {
     const isMobileView = useMediaQuery(theme.breakpoints.down('md'))
     return (
         <Box sx={{ marginTop: isMobileView ? "100px" : "", backgroundColor: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Typography sx={{ fontSize: isMobileView ? "30px" : "50px", fontWeight: '900', color: '#666', textAlign: 'center', marginTop: '20px' }}>Website <span style={{ color: '#f91942' }}>Development</span> </Typography>
-            <Typography sx={{ fontSize: isMobileView ? "20px" : "30px", fontWeight: '400', color: '#666', textAlign: 'center' }}>Unlock digital pontential, one code at a time!</Typography>
+        <img style={{ width: '100%', height: 'auto' }} src={web} />
             <Container sx={{ display: 'flex', flexDirection: isMobileView ? "column" : "row", alignItems: 'center', justifyContent: "space-around", width: '100%', margin: '20px' }}>
-                <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', padding: '20px' }}>
-                    <Typography sx={{ color: 'white', fontSize: isMobileView ? '25px' : "30px", textAlign: isMobileView ? "center" : "start" }}>Creative Solutions for Your Business</Typography>
-                    <Typography sx={{ color: 'white', fontSize: isMobileView ? "15px" : '20px', maxWidth: '500px', marginTop: '20px', hyphens: 'auto', textAlign: isMobileView ? "center" : "start" }}>At Codesintensity, We believe that a website is more than just an online presence. It’s a representation of your brand, your values, and your unique identity. That’s why we work closely with our clients to understand their vision, objectives, and target audience. We take the time to ask the right questions and listen to your feedback, so we can create a website that truly reflects your business.</Typography>
+                <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', padding: '0px' }}>
+                    <Typography sx={{ color: 'white', fontSize: isMobileView ? '25px' : "35px", textAlign: isMobileView ? "center" : "start",fontWeight:'700',fontFamily: 'montserrat' }}>Transforming businesses with <span style={{ color: '#f91942' }}>stunning websites!</span></Typography>
+                    <Typography sx={{ color: 'white', fontSize: isMobileView ? "15px" : '20px', maxWidth: 'auto', marginTop: '5px', hyphens: 'auto', textAlign: isMobileView ? "center" : "start" }}>In today's digital age, having an online presence is essential for businesses to reach and engage with potential customers. At <span style={{ color: '#f91942' }}>CODESINTENSITY</span>, we specialize in crafting dynamic and effective websites that elevate businesses in the online sphere. With meticulous attention to detail and a keen understanding of user experience, our team creates bespoke websites tailored to meet the unique needs and goals of each client.</Typography>
                 </Box>
-                <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center',marginTop:'10px' }}>
                     <Paper sx={{ backgroundColor: '#802201', backgroundImage: 'linear-gradient(326deg, #802201 0%, #210d10 74%)', borderRadius: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                         <Typography sx={{ color: 'white', fontSize: '25px', fontWeight: '700', fontFamily: 'montserrat', marginTop: '20px' }}>Features Benefits</Typography>
-                        <Box sx={{ margin: '30px' }}>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Continuous Improvement</Typography>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Streamlined Processes</Typography>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Value-added Services</Typography>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Tailored Solutions</Typography>
+                        <Box sx={{ margin: '25px' }}>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Responsive Design</Typography>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Cross-Browser Compatibility</Typography>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Performance Optimization</Typography>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Testing and Debugging</Typography>
                             <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Delivery On Time</Typography>
                             <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />24 x 7 Support</Typography>
                         </Box>
@@ -138,34 +138,34 @@ const Web = () => {
             {databack.map(item => (
                 <Grid sx={{display:'flex',width:'100%',alignItems:'center',justifyContent:'center'}} key={item.id} item xs={6} sm={6} md={6} lg={3}>
 
-                    <Paper sx={{ width:'170px', height:"170px",display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#141415',gap:'20px',margin:'20px'}}>
+                    <Paper sx={{ width:'170px', maxHeight:'200px',display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#141415',gap:'20px',margin:'20px'}}>
 
-                        <img style={{ width: '100%',height:'90%', backgroundColor: 'transparent',padding:'10px' }} src={item.img} alt={`Image ${item.id}`} />
-                        <Typography sx={{color:'white',fontSize:'20px',lineHeight:'0px',fontWeight:'700',padding:'30px'}}>{item.val}</Typography>
+                        <img style={{ width: '100%',height:'100%', backgroundColor: 'transparent',padding:'20px' }} src={item.img} alt={`Image ${item.id}`} />
+                        <Typography sx={{color:'white',fontSize:'20px',lineHeight:'0px',fontWeight:'700',padding:'20px'}}>{item.val}</Typography>
                     </Paper>
                 </Grid>
             ))}
         </Grid>
     </Box>
-            <img style={{ width: '100%', height: 'auto' }} src={web} />
+            
 
-            <Box sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
-            <Box sx={{width:'100%',height:'190px',backgroundColor:'#110c11',margin:'20px',display:'flex',flexDirection:isMobileView?"column":"row",alignItems:'center',justifyContent:'space-around',borderRadius:'20px',boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 100, 0, 0.12) 0px 12px 30px, rgba(0, 100, 0, 0.12) 10px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(100, 0, 0, 0.09) 0px -3px 5px'}}>
+            <Container sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
+            <Box sx={{width:'100%',height:'190px',backgroundColor:'#151922',margin:'20px',display:'flex',flexDirection:isMobileView?"column":"row",alignItems:'center',justifyContent:'space-around',borderRadius:'20px',boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 100, 0, 0.12) 0px 12px 30px, rgba(0, 100, 0, 0.12) 10px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(100, 0, 0, 0.09) 0px -3px 5px'}}>
             <Box sx={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
-            <Typography sx={{color:'white',fontSize:'20px',fontFamily:'Montserrat',fontWeight:'600'}}>Confirm your booking or any query!</Typography>
+            <Typography sx={{color:'white',fontSize:'20px',fontFamily:'Montserrat',fontWeight:'600'}}>Confirm with Whatsapp!</Typography>
             <Typography sx={{color:'white',fontSize:'15px',fontFamily:'Montserrat',fontWeight:'400',maxWidth:'28 0px'}}>Let’s connect with team.</Typography>
      
             </Box>
             <Box>
-            <button className="learn-more">
+            <button onClick={()=>navigate('/contact')} className="learn-more">
             <span className="circle" aria-hidden="true">
               <span className="icon arrow"></span>
             </span>
-            <Typography className="button-text">Learn More</Typography>
+            <Typography onClick={()=>navigate('/contact')} className="button-text">Contact Us</Typography>
           </button>
             </Box>
             </Box>
-         </Box>
+         </Container>
             <Divider orientation='horizontal' sx={{ border: '0.5px solid white', width: '100%' }} />
         </Box>
     )

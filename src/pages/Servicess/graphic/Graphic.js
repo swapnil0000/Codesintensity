@@ -63,13 +63,13 @@ const Graphic = () => {
             id: 5,
             img: thumbnail,
             tittle: 'Thumbnail for youtube or instagram',
-            val: 'creating thumbnails involves crafting visually captivating and informative materials to engage audiences effectively.'
+            val: 'Creating thumbnails involves crafting visually captivating and informative materials to engage audiences effectively.'
         },
         {
             id: 6,
             img: brochure,
             tittle: 'Develop any brochure as per your choice',
-            val: 'creating brochures involves crafting visually captivating and informative materials to engage audiences effectively.'
+            val: 'Creating brochures involves crafting visually captivating and informative materials to engage audiences effectively.'
         },
     ]
     const theme = useTheme();
@@ -85,20 +85,20 @@ const Graphic = () => {
             <Typography sx={{ fontSize: isMobileView ? "20px" : "30px", fontWeight: '400', color: '#666', textAlign: 'center' }}>Unlock digital pontential, one code at a time!</Typography>
 
             <Container sx={{ display: 'flex', flexDirection: isMobileView ? "column" : "row", alignItems: 'center', justifyContent: "space-between", width: '100%', margin: '10px' }}>
-                <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', padding: '10px' }}>
-                    <Typography sx={{ color: 'white', fontSize: isMobileView ? '25px' : "20px", textAlign: isMobileView ? "center" : "start", fontWeight: '700' }}>When Your Business Needs Strong<span style={{ color: '#f91942' }}> Branding!</span></Typography>
-                    <Typography sx={{ color: 'white', fontSize: isMobileView ? "16px" : '17px', maxWidth: '800px', marginTop: '0px', hyphens: 'auto', textAlign: isMobileView ? "center" : "start" }}>
-                        Graphic design is the art of visually communicating ideas and messages through typography, imagery, and layout. It involves creating visually appealing and effective designs for various mediums, including print, digital, and web. Graphic designers use their creativity and technical skills to solve visual problems and engage audiences effectively. </Typography> 
+                <Box sx={{ width: 'auto', display: 'flex', flexDirection: 'column', padding: '10px' }}>
+                    <Typography sx={{ color: 'white', fontSize: isMobileView ? '25px' : "35px", textAlign: isMobileView ? "center" : "start", fontWeight: '700' }}>When Your Business Needs Strong<span style={{ color: '#f91942' }}> Branding!</span></Typography>
+                    <Typography sx={{ color: 'white', fontSize: isMobileView ? "16px" : '17px', maxWidth: '1000px', marginTop: '0px', hyphens: 'auto', textAlign: isMobileView ? "center" : "start" }}>
+                        Graphic design is the art of visually communicating ideas and messages through typography, imagery, and layout. Choose CODESINTENSITY for graphic design excellence, From logos and branding to marketing materials and digital assets, we ensure every design reflects your unique identity and resonates with your target market. Trust CodesIntensity to elevate your brand and make a lasting impression in the competitive market.</Typography> 
                         </Box>
                 <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Paper sx={{ backgroundColor: '#802201', backgroundImage: 'linear-gradient(326deg, #802201 0%, #210d10 74%)', borderRadius: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                         <Typography sx={{ color: 'white', fontSize: '25px', fontWeight: '700', fontFamily: 'montserrat', marginTop: '20px' }}>Features Benefits</Typography>
-                        <Box sx={{ margin: '30px' }}>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Continuous Improvement</Typography>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Streamlined Processes</Typography>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Value-added Services</Typography>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Tailored Solutions</Typography>
-                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Delivery On Time</Typography>
+                        <Box sx={{ margin: '50px' }}>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Visual Communication</Typography>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Creativity</Typography>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Design & Code</Typography>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Attention to Detail</Typography>
+                            <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />Client Collaboration</Typography>
                             <Typography sx={{ fontSize: isMobileView ? "18px " : "24px", fontWeight: '700', display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#666', gap: '5px', fontFamily: 'montserrat' }}><CircleIcon sx={{ color: '#f91942', fontSize: '15px', fontWeight: '900' }} />24 x 7 Support</Typography>
                         </Box>
                     </Paper>
@@ -108,18 +108,18 @@ const Graphic = () => {
             </Container>
 
             <Box sx={{ width: '100%', height: 'auto' }}>
-                <Paper elevation={1} sx={{ width: '100%', height: 'auto', backgroundColor: '#666' }}>
+                <Paper elevation={1} sx={{ width: '100%', height: 'auto', backgroundColor: '#151922' ,borderRadius:'20px'}}>
                 <Typography sx={{ fontSize: isMobileView ? "30px" : "50px", fontWeight: '900', color: 'white', textAlign: 'center', margin: '20px' }}>Feature <span style={{ color: '#f91942' }}>Provided</span> </Typography>
                     <Box>
                         <Grid container >
                             {data.map(item => (
                                 <Grid sx={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center' }} key={item.id} item xs={12} sm={12} md={6} lg={4}>
 
-                                    <Paper sx={{ width: '100%', height: "300px", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#141415', gap: '20px', margin: '20px' }}>
+                                    <Paper sx={{ width: '100%', height: "300px", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#141415', gap: '20px', margin: '20px',borderRadius:'20px' }}>
 
                                         <img style={{ width: '100px', height: '100px', backgroundColor: 'transparent' }} src={item.img} alt={`Image ${item.id}`} />
                                         <Typography sx={{ fontSize: '20px', fontWeight: '700', textAlign: 'center', color: 'white' }}>{item.tittle}</Typography>
-                                        <Typography sx={{ color: 'white', fontSize: isMobileView ? "15px" : "17px", fontWeight: '400', textAlign: 'center', margin: '10px' }}>{item.val}</Typography>
+                                        <Typography sx={{ color: 'white', fontSize: isMobileView ? "15px" : "17px", fontWeight: '400', textAlign: 'center',margin:'10px' ,width:'90%'}}>{item.val}</Typography>
                                     </Paper>
                                 </Grid>
                             ))}
@@ -127,7 +127,7 @@ const Graphic = () => {
                     </Box>
                 </Paper>
             </Box>
-            <Box sx={{ width: '100%', height: 'auto' , marginBottom:'30px',backgroundColor:'black'}}>
+            <Container sx={{ width: '100%', height: 'auto' , marginBottom:'30px',backgroundColor:'black'}}>
             <Typography sx={{ fontSize: isMobileView ? "30px" : "50px", fontWeight: '900', color: 'white', textAlign: 'center', margin: '20px' }}>Some work on <span style={{ color: '#f91942' }}>Figma</span> </Typography>
 
             <Paper elevation={1} sx={{ width: '100%', height: 'auto',backgroundColor:'black' }}>
@@ -145,15 +145,14 @@ const Graphic = () => {
                 </Grid>
             </Box>
         </Paper>
-            </Box>
+            </Container>
             <Divider orientation='horizontal' sx={{ border: '0.5px solid white', width: '100%' }} />
 
             <Container>
                 <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <Box sx={{ width: '100%', height: '150px', backgroundColor: '#110c11', margin: '20px', display: 'flex', flexDirection: isMobileView ? "column" : "row", alignItems: 'center', justifyContent: 'space-around', borderRadius: '20px', boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 100, 0, 0.12) 0px 12px 30px, rgba(0, 100, 0, 0.12) 10px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(100, 0, 0, 0.09) 0px -3px 5px' }}>
+                    <Box sx={{ width: '100%', height: '150px', backgroundColor: '#151922', margin: '20px', display: 'flex', flexDirection: isMobileView ? "column" : "row", alignItems: 'center', justifyContent: 'space-around', borderRadius: '20px', boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 100, 0, 0.12) 0px 12px 30px, rgba(0, 100, 0, 0.12) 10px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(100, 0, 0, 0.09) 0px -3px 5px' }}>
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                            <Typography sx={{ color: 'white', fontSize: isMobileView ? "15px" : "20px", fontFamily: 'Montserrat', fontWeight: '600' }}>Confirm your booking or any query!</Typography>
-                            <Typography sx={{ color: 'white', fontSize: '15px', fontFamily: 'Montserrat', fontWeight: '400', maxWidth: '28 0px' }}>Let’s connect with team.</Typography>
+                            <Typography sx={{ color: 'white', fontSize:isMobileView?"20px":"35px", fontFamily: 'Montserrat', fontWeight: '800', maxWidth: '28 0px' }}>Let’s connect with team.</Typography>
 
                         </Box>
                         <Box>

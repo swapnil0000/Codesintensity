@@ -13,6 +13,12 @@ import Hosting from './pages/Servicess/Hosting/Hosting';
 import Graphic from './pages/Servicess/graphic/Graphic';
 import Digital from './pages/Servicess/Digital/Digital';
 import Maintain from './pages/Servicess/Maintain/Maintain';
+import Industry from './pages/industry/Industry';
+import Faqs from './components/links/Faqs';
+import Terms from './components/links/Terms';
+import Support from './components/links/Support';
+import Refund from './components/links/Refund';
+import Privacy from './components/links/Privacy';
 function App() {
   return (
     <>
@@ -30,7 +36,12 @@ function App() {
       <Route path='/graphic' element={<Graphic/>}/>
       <Route path='/digital' element={<Digital/>}/>
       <Route path='/maintain' element={<Maintain/>}/>
-
+      <Route path='/industry' element={<Industry/>}/>
+      <Route path='/faqs' element={<Faqs/>}/>
+      <Route path='/terms' element={<Terms/>}/>
+      <Route path='/support' element={<Support/>}/>
+      <Route path='/refund' element={<Refund/>}/>
+      <Route path='/privacy' element={<Privacy/>}/>
      </Routes>
      <Footer/>
     </BrowserRouter>

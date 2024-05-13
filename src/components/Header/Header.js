@@ -323,6 +323,8 @@ export default function Header() {
                 
                
                 <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600' }} onClick={()=>navigate('/about')}>About</Typography>
+                <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600' }} onClick={()=>navigate('/industry')}>Industries</Typography>
+
 
                 <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600' }} onClick={()=>navigate('/contact')}>Contact</Typography>
 

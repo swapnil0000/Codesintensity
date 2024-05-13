@@ -45,7 +45,7 @@ const Feature = () => {
   
 
   return (
-    <div style={{ backgroundImage: `url(${black})`, backgroundSize: 'cover', height:isMobileView?"auto":"700px", padding: '20px' ,objectFit:'cover'}}>
+    <div style={{ backgroundImage: `url('/assets/back.webp')`, backgroundSize: 'cover', height:isMobileView?"auto":"700px", padding: '20px' ,objectFit:'cover'}}>
     <Typography sx={{fontSize:isMobileView?"35px":"50px",fontWeight:'900',color:'white',textAlign:'center',marginTop:'30px'}}>Features Provided</Typography>
       <Container maxWidth="lg" sx={{marginTop:'20px'}}>
         <Grid container spacing={3}>

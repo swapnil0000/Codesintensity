@@ -35,7 +35,7 @@ const Services = () => {
         {
             id: 4,
             img: marketing,
-            path:'/marketing',
+            path:'/digital',
             tittle: 'Digital Marketing',
             des: 'Improve your website’s SEO & generate more leads.'
         },
