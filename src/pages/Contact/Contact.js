@@ -7,18 +7,17 @@ import contactimg from "../Contact/contact.jpg"
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import contactimgage from "../Contact/background.jpg"
+import background from "../Contact/contactback.webp"
 const Contact = () => {
+   
     const theme=useTheme();
     const isMobileView=useMediaQuery(theme.breakpoints.down('md'))
   return (
     <Box >
     <Box sx={{  border: 'none', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-    <video autoPlay muted loop style={{ width: '100%',height:isMobileView?"400px":"600px", objectFit: 'cover' }}>
-      <source src={contact} type='video/mp4' />
-      Your browser does not support the video tag.
-    </video>
+    <img src={background} style={{ width: '100%',height:'600px', objectFit: 'cover' }}/>
     <Box sx={{ position: 'absolute', bottom:isMobileView?"35%":"40%", transform: 'translate(-50%, 100%)', color: 'white', fontSize: '24px', animation: 'moveUp 3s forwards' }}>
-      <Typography sx={{ fontSize:isMobileView?"40px":"100px", width: '950px', fontFamily: 'Montserrat', fontWeight: '700', textAlign: 'center' }}>GET IN TOUCH</Typography>
+      <Typography sx={{ fontSize:isMobileView?"40px":"110px", width: '100%', fontFamily: 'Montserrat', fontWeight: '900', textAlign: 'center',color:'white' }}>Get in Touch with Us</Typography>
     </Box>
   </Box>
    <Container sx={{display:'flex',alignItems:'center',justifyContent:'center',width:'100%',flexDirection:'column',marginTop:'20px'}}>
@@ -31,7 +30,7 @@ const Contact = () => {
      </Box>
     </Box>
     <Box sx={{display:'flex',flexDirection:isMobileView?"column":"row",alignItems:'center',justifyContent:'space-around',width:'100%',margin:'20px'}}>
-     <Typography sx={{color:'#666',fontSize:isMobileView?"20px":"30px",fontWeight:'900'}}><CallIcon sx={{marginRight:'10px',color:'#f91942',fontSize:'30px'}}/>+91 6386455982</Typography>
+     <Typography sx={{color:'#666',fontSize:isMobileView?"20px":"30px",fontWeight:'900'}}><CallIcon sx={{marginRight:'10px',color:'#f91942',fontSize:'30px'}}/>+91 7017541634</Typography>
      <Typography sx={{color:'#666',fontSize:isMobileView?"20px":"30px",fontWeight:'900'}}><EmailIcon sx={{marginRight:'10px',color:'#f91942',fontSize:'30px'}}/>codesintensity@gmail.com</Typography>
 
     </Box>

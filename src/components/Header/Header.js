@@ -17,6 +17,7 @@ import web from "../Header/assetsmenu/webdevelopment.png"
 import app from "../Header/assetsmenu/appdevelopment.png"
 import marketing from "../Header/assetsmenu/marketing.png"
 import maintain from "../Header/assetsmenu/maintainence.png"
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import graphic from "../Header/assetsmenu/design.png"
 
 
@@ -115,6 +116,13 @@ export default function Header() {
 
   }
 
+  const handleWhatsapp = () => {
+    // Replace '1234567890' with the phone number you want to send the message to
+    const phoneNumber = '7017541634';
+    const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
  
   return (
     <>
@@ -202,7 +210,10 @@ export default function Header() {
                       {group.map(item => (
                         <Grid item xs={12} sm={4} key={item.id}>
                           <Box sx={{ width: '100%', height: '130px', backgroundColor: 'black', display: 'flex', flexDirection: 'column' ,alignItems:'center',justifyContent:'center'}}>
-                            <Box onClick={()=>handleMenuTask(item.path)}  sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%' }}>
+                            <Box onClick={()=>handleMenuTask(item.path)}  sx={{ display: 'flex', flexDirection: 'row','&:hover': {
+                              transform: 'scale(1.1)', /* Zoom effect */
+                            },    transition: 'transform 0.3s ease',
+                            alignItems: 'center', justifyContent: 'space-around', width: '100%' }}>
                               <img style={{ width: '80px', marginLeft: '20px', marginTop: '10px',height:'auto' }} src={item.img} />
                               <Typography sx={{ color: 'white', fontWeight: '900' }}>{item.tittle}</Typography>
                             </Box>
@@ -308,10 +319,12 @@ export default function Header() {
                         {group.map(item => (
                           <Grid item xs={12} sm={4} key={item.id}>
                             <Box sx={{ width: '250px', height: '140px', backgroundColor: 'black', display: 'flex', flexDirection: 'column',alignItems:'center',justifyContent:'center' }}>
-                              <Button onClick={()=>handleMenuTask(item.path)}  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', width: '100%' }}>
+                              <Box onClick={()=>handleMenuTask(item.path)}  sx={{ display: 'flex',transition: 'transform 0.3s ease','&:hover': {
+                                transform: 'scale(1.1)', /* Zoom effect */
+                              }, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', width: '100%' }}>
                                 <img style={{ width: '80px', marginLeft: '10px', marginTop: '10px',height:'auto' }} src={item.img} />
-                                <Typography sx={{ color: 'white', fontWeight: '900' }}>{item.tittle}</Typography>
-                              </Button>
+                                <Typography sx={{ color: 'white', fontWeight: '400' }}>{item.tittle}</Typography>
+                              </Box>
                             </Box>
                           </Grid>
                         ))}
@@ -330,8 +343,15 @@ export default function Header() {
 
             </Box>
 
-            <Box>
-             <Button sx={{width:'200px'}} variant='contained'>+91-6386455982</Button>
+            <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+             <Button onClick={handleWhatsapp}  sx={{width:'200px',gap:'10px',border:'none',backgroundColor:'black',color:'white','&:hover': {
+              backgroundColor: 'black', // Keeping the background color same on hover
+              color: 'white',
+    
+              border:'1px solid black' // Keeping the text color same on hover
+            },}} variant='outlined' >
+            <WhatsAppIcon sx={{ color: 'lightgreen', fontWeight: '700',gap:'10px' }} />
+            +91-7017541634</Button>
             </Box>
            
           </Toolbar>

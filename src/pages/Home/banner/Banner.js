@@ -14,10 +14,8 @@ const Banner = () => {
   const isMobileView=useMediaQuery(theme.breakpoints.down('md'))
   return (
     <Box sx={{ marginTop: '0px', border: 'none', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <video autoPlay muted loop style={{ width: '100%',height:isMobileView?"400px":"600px",  objectFit: 'cover' }}>
-        <source src={video} type='video/mp4' />
-        Your browser does not support the video tag.
-      </video>
+      <Box sx={{ width: '100%',height:isMobileView?"400px":"600px",  objectFit: 'cover',backgroundColor:'black' }}>
+      </Box>
       <Box sx={{ position: 'absolute', bottom:'30%', transform: 'translate(-50%, 100%)', color: 'white', fontSize: '24px', animation: 'moveUp 3s forwards',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center' }}>
         <Typography sx={{ fontSize:isMobileView?"20px":"50px", width:isMobileView?"350px":"950px", fontFamily: 'Montserrat', background: `-webkit-linear-gradient(150deg, #006400, #ffffff, #0000)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: '700', textAlign: 'center' }}>
           Welcome to <span style={{ fontSize:isMobileView?"30px":"100px", fontWeight: '900', fontFamily: 'Montserrat' }}>CODESINTENSITY</span>
