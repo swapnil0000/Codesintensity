@@ -1,51 +1,44 @@
 import { Box, Container, Divider, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useEffect } from 'react'
-import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
 import CircleIcon from '@mui/icons-material/Circle';
-import maintain from "../Hosting/domainhosting.jpg"
-import aws from "../Hosting/aws.png"
-import firebase from "../Hosting/firebase.png"
-import godaddy from "../Hosting/domain&hosting.png"
-import hostinger from "../Hosting/hostinger.jpg"
-import vercel from "../Hosting/vercel.jpeg"
-import git from "../Hosting/github.png"
+
 
 const Maintain = () => {
   const data=[
     {
         id:1,
-        img:aws,
+        img:"/assets/aws.webp",
          tittle:'Increasing Reach in Digital Marketing',
         val:'A strong social media marketing strategy increases brand awareness and places your company in front of the right customers.'  
     },
     {
         id:2,
-        img:firebase,
+        img:"/assets/firebase.webp",
         tittle:'Ranking in Digital Marketing',
         val:'Increased social media sharing of your content leads to higher website traffic and improved search rankings.'  
     },
     {
         id:3,
-        img:godaddy,
+        img:"/assets/hostinger.webp",
         tittle:'Exposure in Digital Marketing',
         val:'An effective content strategy generates more engagements and social signals, allowing interaction with a broader online community.'  
     },
     {
         id:4,
-        img:hostinger,
+        img:"/assets/vercel.webp",
         tittle:'Brand Control in Digital Marketing',
         val:'Social media marketing packages are customized to fit your needs and budget, giving you control over branding and content strategy.'  
     },
     {
         id:5,
-        img:vercel,
+        img:"/assets/godaddy.webp",
         tittle:'Target Audience in Digital Marketing',
         val:'Experts analyze niche markets to craft relevant content and ads addressing customers needs based on their online behavior.'  
     },
     {
         id:6,
-        img:git,
+        img:"/assets/github.webp",
         tittle:'Support in Digital Marketing',
         val:'Using social media for marketing builds a thought leadership brand and creates meaningful connections with followers'
     },
@@ -98,7 +91,7 @@ const Maintain = () => {
                 border: '0.5px solid rgba(255, 0, 0, 0.5)', // Red border
             }}>
                 <Box >
-                    <img src={maintain} alt='maintain' style={{ width:isMobileView?"500px":"400px",height:isMobileView?"300px":"350px" ,borderRadius:'40px',padding:'10px'}} />
+                    <img src="../assets/domainhosting.webp" alt='maintain' style={{ width:isMobileView?"500px":"400px",height:isMobileView?"300px":"350px" ,borderRadius:'40px',padding:'10px'}} />
                 </Box>
                 <Box sx={{width:'500px',padding:'10px',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column'}}>
                     <Typography  sx={{ color: '#fff',fontSize:'28px',fontWeight:'500',textAlign:isMobileView?"center":"start",width:isMobileView?"350px":"500px" }}>Stay worry-free with our web <span style={{ color: '#f91942' }}>Domain & Hosting</span></Typography>

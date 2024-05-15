@@ -1,50 +1,42 @@
 import { Box, Container, Divider, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useEffect } from 'react'
-import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
 import CircleIcon from '@mui/icons-material/Circle';
-import ranking from "../Digital/ranking.png"
-import exposure from "../Digital/exposure.png"
-import support from "../Digital/support.png"
-import reach from "../Digital/reach.png"
-import brandcontrol from "../Digital/brandcontrol.png"
-import targetaudience from "../Digital/targetaudience.png"
-
 const Digital = () => {
     const data=[
         {
             id:1,
-            img:reach,
+            img:"/assets/reach.webp",
              tittle:'Increasing Reach in Digital Marketing',
             val:'A strong social media marketing strategy increases brand awareness and places your company in front of the right customers.'  
         },
         {
             id:2,
-            img:ranking,
+            img:"/assets/ranking.webp",
             tittle:'Ranking in Digital Marketing',
             val:'Increased social media sharing of your content leads to higher website traffic and improved search rankings.'  
         },
         {
             id:3,
-            img:exposure,
+            img:"/assets/exposure.webp",
             tittle:'Exposure in Digital Marketing',
             val:'An effective content strategy generates more engagements and social signals, allowing interaction with a broader online community.'  
         },
         {
             id:4,
-            img:brandcontrol,
+            img:"/assets/brandcontrol.webp",
             tittle:'Brand Control in Digital Marketing',
             val:'Social media marketing packages are customized to fit your needs and budget, giving you control over branding and content strategy.'  
         },
         {
             id:5,
-            img:targetaudience,
+            img:"/assets/targetaudience.webp",
             tittle:'Target Audience in Digital Marketing',
             val:'Experts analyze niche markets to craft relevant content and ads addressing customers needs based on their online behavior.'  
         },
         {
             id:6,
-            img:support,
+            img:"/assets/support.webp",
             tittle:'Support in Digital Marketing',
             val:'Using social media for marketing builds a thought leadership brand and creates meaningful connections with followers'
         },

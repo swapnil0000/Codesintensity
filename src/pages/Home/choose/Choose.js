@@ -1,7 +1,6 @@
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import "../choose/choose.css"
-import moder from "../choose/tool.png"
 const Choose = () => {
   const theme=useTheme();
   const isMobileView=useMediaQuery(theme.breakpoints.down('md'));

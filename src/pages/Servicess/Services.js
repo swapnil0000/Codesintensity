@@ -1,25 +1,19 @@
 import { Box, Container, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
-import app from "../Servicess/appdevelopmentlong.jpg"
-import web from "../Servicess/webdevelopmentlong.jpg"
-import hosting from "../Servicess/webhostinglong.jpg"
-import marketing from "../Servicess/marketinglong.jpg"
-import maintain from "../Servicess/websitemaintainlong.jpg"
-import graphic from "../Servicess/desinglong.jpg"
 import { useNavigate,useLocation } from 'react-router-dom'
 const Services = () => {
    
     const data = [
         {
             id: 1,
-            img: hosting,
+            img: "/assets/webhostinglong.webp",
             path:'/hosting',
             tittle: 'Domain and Hosting',
             des: 'Domain & hosting services to host your website at the top.'
         },
         {
             id: 2,
-            img: web,
+            img: "/assets/webdevelopmentlong.webp",
             path:'/web',
             tittle: 'Website Development',
             des: 'Developing a user-friendly interface to engage customers.'
@@ -27,28 +21,28 @@ const Services = () => {
         },
         {
             id: 3,
-            img: app,
+            img: "/assets/appdevelopmentlong.webp",
             path:'/app',
             tittle: 'App Development',
             des: 'Developing responsive mobile Apps for both IOS & Androids.'
         },
         {
             id: 4,
-            img: marketing,
+            img: "/assets/marketinglong.webp",
             path:'/digital',
             tittle: 'Digital Marketing',
             des: 'Improve your website’s SEO & generate more leads.'
         },
         {
             id: 5,
-            img: maintain,
+            img: "/assets/websitemaintainlong.webp",
             path:'/maintain',
             tittle: 'Website Maintainence',
             des: 'Regular updates to site backups, security checks, & optimization.'
         },
         {
             id: 6,
-            img: graphic,
+            img: "/assets/desinglong.webp",
             path:'/graphic',
             tittle: 'Graphic Designer',
             des: 'Designing logos, and other media to build the brand identity.'

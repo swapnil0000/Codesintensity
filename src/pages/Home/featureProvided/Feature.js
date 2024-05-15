@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Grid, Typography, Container, Button, CardMedia, CardActions, useMediaQuery, useTheme } from '@mui/material';
-import black from "../featureProvided/back.jpg";
-import web from "../featureProvided/web.jpg"
-import hosting from "../featureProvided/hostinghome.jpg"
-import app from "../featureProvided/appdevelopment.jpg"
 import {useNavigate} from "react-router-dom"
 const Feature = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage card open/close
@@ -18,21 +14,21 @@ const Feature = () => {
   const data=[
     {
       id:1,
-      img:web,
+      img:"/assets/web.webp",
       path:'/web',
       tittle:'Web Development',
       des:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
     },
     {
       id:2,
-      img:hosting,
+      img:"/assets/hostinghome.webp",
       path:'/hosting',
       tittle:'Domain & Hosting',
       des:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
     },
     {
       id:3,
-      img:app,
+      img:"/assets/appdevelopment.webp",
       path:'/app',
       tittle:'App Development',
       des:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
@@ -45,7 +41,7 @@ const Feature = () => {
   
 
   return (
-    <div style={{ backgroundImage: `url('/assets/back.webp')`, backgroundSize: 'cover', height:isMobileView?"auto":"700px", padding: '20px' ,objectFit:'cover'}}>
+    <div style={{ backgroundImage: `url('/assets/backblack.webp')`, backgroundSize: 'cover', height:isMobileView?"auto":"700px", padding: '20px' ,objectFit:'cover'}}>
     <Typography sx={{fontSize:isMobileView?"35px":"50px",fontWeight:'900',color:'white',textAlign:'center',marginTop:'30px'}}>Features Provided</Typography>
       <Container maxWidth="lg" sx={{marginTop:'20px'}}>
         <Grid container spacing={3}>

@@ -1,9 +1,7 @@
 import { Box, Container, Divider, Paper, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useEffect } from 'react'
-import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
 import CircleIcon from '@mui/icons-material/Circle';
-import maintain from "../Maintain/maintain.jpg"
 
 const Maintain = () => {
     const { pathname } = useLocation();
@@ -54,7 +52,7 @@ const Maintain = () => {
                 border: '0.5px solid rgba(255, 0, 0, 0.5)', // Red border
             }}>
                 <Box >
-                    <img src={maintain} alt='maintain' style={{ width:isMobileView?"500px":"400px",height:isMobileView?"300px":"350px" ,borderRadius:'40px',padding:'10px'}} />
+                    <img src='/assets/maintain.webp' alt='maintain' style={{ width:isMobileView?"500px":"400px",height:isMobileView?"300px":"350px" ,borderRadius:'40px',padding:'10px'}} />
                 </Box>
                 <Box sx={{width:'500px',padding:'10px',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column'}}>
                     <Typography  sx={{ color: '#fff',fontSize:'28px',fontWeight:'500',textAlign:isMobileView?"center":"start",width:isMobileView?"350px":"500px" }}>Stay worry-free with our web <span style={{ color: '#f91942' }}>maintenance service</span></Typography>

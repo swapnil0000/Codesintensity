@@ -1,23 +1,16 @@
 import { Box, Container, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
-import travel from "../industry/travel.webp"
-import technology from "../industry/technology.webp"
-import construction from "../industry/construction.webp"
-import ecommerce from "../industry/ecommerce1.webp"
-import restaurant from "../industry/restaurant.webp"
-import education from "../industry/education.webp"
-
 const Industry = () => {
     const data = [
         {
             id: 1,
-            img: travel,
+            img: "/assets/travel.webp",
             tittle: 'Tour & Travel',
             des: 'Domain & hosting services to host your website at the top.'
         },
         {
             id: 2,
-            img: technology,
+            img: "/assets/technology.webp",
             path:'/web',
             tittle: 'Technology',
             des: 'Developing a user-friendly interface to engage customers.'
@@ -25,28 +18,28 @@ const Industry = () => {
         },
         {
             id: 3,
-            img: construction,
+            img: "/assets/construction.webp",
             path:'/app',
             tittle: 'Real State',
             des: 'Developing responsive mobile Apps for both IOS & Androids.'
         },
         {
             id: 4,
-            img: ecommerce,
+            img: "/assets/ecommerce1.webp",
             path:'/digital',
             tittle: 'Any Ecommerce',
             des: 'Improve your’s SEO & generate more leads.'
         },
         {
             id: 5,
-            img: restaurant,
+            img: "/assets/restaurant.webp",
             path:'/maintain',
             tittle: 'Restaurant',
             des: 'Regular updates to site backups, security checks, & optimization.'
         },
         {
             id: 6,
-            img: education,
+            img: "/assets/travel.webpeducation.webp",
             path:'/graphic',
             tittle: 'Educational',
             des: 'Designing logos, and other media to build the brand identity.'

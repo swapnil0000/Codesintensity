@@ -3,12 +3,7 @@ import React, { useEffect } from 'react'
 import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
 import CircleIcon from '@mui/icons-material/Circle';
-import icon from "../graphic/icon.png"
-import logo from "../graphic/logodesign.png"
-import banner from "../graphic/banner.png"
-import thumbnail from "../graphic/thumbnail.png"
-import brochure from "../graphic/brochure.png"
-import uiux from "../graphic/uiux.png"
+
 import figma1 from "../graphic/figma1.webp"
 import figma2 from "../graphic/figma2.webp"
 import figma3 from "../graphic/figma3.png"
@@ -37,37 +32,37 @@ const Graphic = () => {
     const data = [
         {
             id: 1,
-            img: uiux,
+            img: "/assets/uiux.webp",
             tittle: 'Creating UI for Web & App ',
             val: 'Designing intuitive and visually appealing interfaces for websites, mobile apps, and software applications to enhance user experience and usability.'
         },
         {
             id: 2,
-            img: logo,
+            img: "/assets/logodesign.webp",
             tittle: 'Creating LOGO for Buisness',
             val: 'Creating unique and memorable visual symbols that represent a brands identity and values using ILLUSTRATOR or PHOTOSHOP'
         },
         {
             id: 3,
-            img: banner,
+            img: "/assets/banner.webp",
             tittle: 'Creating Banner or Poster for marketing',
             val: 'An effective content strategy generates more engagements and social signals, allowing interaction with a broader online community.'
         },
         {
             id: 4,
-            img: icon,
+            img: "/assets/icon.webp",
             tittle: 'Unique ICON for growing buisness',
             val: 'Creating unique and recognizable icons for digital interfaces, applications, websites, and other platforms to represent actions, features, or concepts.            '
         },
         {
             id: 5,
-            img: thumbnail,
+            img: "/assets/thumbnail.webp",
             tittle: 'Thumbnail for youtube or instagram',
             val: 'Creating thumbnails involves crafting visually captivating and informative materials to engage audiences effectively.'
         },
         {
             id: 6,
-            img: brochure,
+            img: "/assets/brochure.webp",
             tittle: 'Develop any brochure as per your choice',
             val: 'Creating brochures involves crafting visually captivating and informative materials to engage audiences effectively.'
         },

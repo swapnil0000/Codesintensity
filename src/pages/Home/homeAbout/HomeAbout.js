@@ -1,6 +1,5 @@
 import { Box, Button, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React, { useRef, useEffect } from 'react';
-import whatarewe from "../homeAbout/backwhat.jpg";
 import "../homeAbout/homeabout.css";
 import {  useNavigate } from 'react-router-dom';
 
@@ -38,7 +37,7 @@ const HomeAbout = () => {
     <Container ref={componentRef}>
       <Box sx={{ marginTop: '30px', display: 'flex',alignItems:'center', flexDirection:isMobileView?"column":"row", width: '100%', height:isMobileView?"600px":"400px", justifyContent: 'space-evenly' }}>
         <Box>
-          <img style={{ width: '290px', borderRadius: '30px' }} src={whatarewe} alt='logo' />
+          <img style={{ width: '290px', borderRadius: '30px' }} src="/assets/backwhat.webp" alt='logo' />
         </Box>
         <Box sx={{display:'flex',flexDirection:'column'}}>
         <Typography sx={{ fontSize:isMobileView?"30px":"40px", fontFamily: 'Montserrat',color:'#666', fontWeight: '900',textAlign:isMobileView?"start":"start" }}>What are we?</Typography>

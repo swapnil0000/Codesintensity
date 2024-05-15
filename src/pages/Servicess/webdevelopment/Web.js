@@ -4,19 +4,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import { useLocation, useNavigate } from 'react-router-dom';
 import web from "../webdevelopment/web.jpg"
 import CircleIcon from '@mui/icons-material/Circle';
-import html from "../webdevelopment/html.webp"
-import css from "../webdevelopment/css.webp"
-import javascript from "../webdevelopment/javascript.webp"
-import react from "../webdevelopment/react.webp"
-import material from "../webdevelopment/materail.webp"
-import tailwand from "../webdevelopment/tailwand.png"
-import type from "../webdevelopment/typescript.svg"
-import angular from "../webdevelopment/angular.png"
 
-import nodejs from "../webdevelopment/nodejs.png"
-import python from "../webdevelopment/python.png"
-import java from "../webdevelopment/java.png"
-import php from "../webdevelopment/phpp.png"
 
 
 const Web = () => {
@@ -24,39 +12,39 @@ const Web = () => {
     const data=[
         {
             id:1,
-            img:html,
+            img:'/assets/html.webp',
             val:"HTML5"
         },
         {
             id:2,
-            img:css,
+            img:'/assets/css.webp',
             val:"CSS3"
         },{
             id:3,
-            img:javascript,
+            img:'/assets/javascript.webp',
             val:"Javascript"
         },{
             id:4,
-            img:react,
+            img:'/assets/react.webp',
             val:"React"
         },
         {
             id:4,
-            img:angular,
-            val:"React"
+            img:'/assets/angular.png',
+            val:"Angular"
         },
         {
             id:5,
-            img:material,
+            img:'/assets/materail.webp',
             val:"MaterialUI"
         },{
             id:6,
-            img:tailwand,
+            img:'/assets/tailwand.webp',
             val:"Tailwand CSS"
         },
         {
             id:7,
-            img:type,
+            img:'/assets/typescript.webp',
             val:"Typescript"
         },
     ]
@@ -64,20 +52,20 @@ const Web = () => {
     const databack=[
         {
             id:1,
-            img:nodejs,
+            img:'/assets/nodejs.webp',
             val:"Nodejs"
         },
         {
             id:2,
-            img:python,
+            img:'/assets/python.webp',
             val:"Python"
         },{
             id:3,
-            img:php,
+            img:'/assets/phpp.png',
             val:"PHP"
         },{
             id:4,
-            img:java,
+            img:'/assets/java.png',
             val:"Java"
         },
     ]

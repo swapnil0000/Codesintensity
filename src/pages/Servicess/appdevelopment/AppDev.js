@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import DoneIcon from '@mui/icons-material/Done';
 import { useLocation } from 'react-router-dom';
 import CircleIcon from '@mui/icons-material/Circle';
-import app from "../appdevelopment/apptech.jpg"
 
 
 const AppDev = () => {
@@ -45,7 +44,7 @@ const AppDev = () => {
             <Typography sx={{ fontSize: isMobileView ? "50px" : "50px", fontWeight: '900', color: '#666', textAlign: 'center', marginTop: '20px' }}>Tech Used</Typography>
                         <Paper sx={{ width:'100%', height:'100%',display: 'flex', flexDirection: 'column', marginTop: '5px', alignItems: 'center', justifyContent: 'space-evenly', backgroundColor: '#141415'}}>
 
-                            <img style={{ width: '100%',height:'100%', backgroundColor: 'transparent' }} src={app}  />
+                            <img style={{ width: '100%',height:'100%', backgroundColor: 'transparent' }} src="/assets/apptech.webp"  />
                            
                         </Paper>
              

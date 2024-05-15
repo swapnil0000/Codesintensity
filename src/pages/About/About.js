@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import aboutvideo from "../About/about.mp4"
-import mission from "../About/ourmission.jpg"
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { useLocation, useNavigate } from 'react-router-dom'
 const About = () => {
