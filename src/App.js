@@ -19,6 +19,7 @@ import Terms from './components/links/Terms';
 import Support from './components/links/Support';
 import Refund from './components/links/Refund';
 import Privacy from './components/links/Privacy';
+import UiUX from './pages/Servicess/UIUX/UiUX';
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
       <Route path='/technology' element={<Technology/>}/>
       <Route path='/web' element={<Web/>}/>
       <Route path='/app' element={<AppDev/>}/>
+      <Route path='/uiux' element={<UiUX/>}/>
       <Route path='/hosting' element={<Hosting/>}/>
       <Route path='/graphic' element={<Graphic/>}/>
       <Route path='/digital' element={<Digital/>}/>

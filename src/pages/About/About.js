@@ -2,9 +2,44 @@ import React, { useEffect } from 'react'
 import aboutvideo from "../About/about.mp4"
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { useLocation, useNavigate } from 'react-router-dom'
-const About = () => {
-    const { pathname } = useLocation();
+import  {  useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger'; // Import ScrollTrigger
 
+const About = () => {
+
+  gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
+
+  const elementRefs = useRef([]); // Ref for multiple elements
+
+  useEffect(() => {
+    // Use GSAP inside useEffect
+    gsap.utils.toArray(".revealUp").forEach((elem) => {
+      gsap.fromTo(
+        elem,
+        { y: 100, autoAlpha: 0 },
+        {
+          duration: 1.25,
+          y: 0,
+          autoAlpha: 1,
+          ease: "back",
+          scrollTrigger: {
+            trigger: elem,
+            start: "top 80%",
+            end: "bottom 20%",
+            markers: false,
+            toggleActions: "play none none none" // Only play the animation on enter
+          }
+        }
+      );
+    });
+  }, []); // Empty dependency array for mounting once
+
+
+  
+
+
+    const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -12,7 +47,7 @@ const About = () => {
   const navigate=useNavigate();
   const isMobileView=useMediaQuery(theme.breakpoints.down('md'))
   return (
-    <Box>
+    <Box sx={{backgroundColor:'black'}}>
     <Box sx={{ border: 'none', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <video autoPlay muted loop style={{ width: '100%',height:isMobileView?"400px":"600px", objectFit: 'cover' }}>
         <source src={aboutvideo} type='video/mp4' />
@@ -24,25 +59,25 @@ const About = () => {
       </Box>
     </Box>
      <Container sx={{marginTop:'40px'}}>
-       <Box sx={{display:'flex',flexDirection:'row'}}>
-        <Box>
-         <Typography style={{ fontSize: '40px', fontWeight: '900', fontFamily: 'Montserrat',color:'#f91942' }}>ABOUT,</Typography>
-         <Typography sx={{ fontSize: '20px', fontFamily: 'Montserrat',color:'#666', fontWeight: '400', textAlign: 'start' }}><span style={{ fontSize: '25px', fontWeight: '900', fontFamily: 'Montserrat' }}>CODESINTENSITY</span> is to revolutionize the digital landscape by providing innovative solutions that empower businesses to thrive in the modern world. We are committed to leveraging our expertise in web development, design, and digital marketing to deliver cutting-edge solutions tailored to meet the unique needs of each of our clients.</Typography>
+       <Box sx={{display:'flex',flexDirection:'row',margin:'auto',overflow:'hidden'}}>
+        <Box   sx={{padding:'10px',overflow:'hidden',lineHeight:'auto'}} >
+         <Typography className="revealUp" ref={(el) => (elementRefs.current[0] = el)} style={{ fontSize: '40px',overflow:'hidden', fontWeight: '900', fontFamily: 'Montserrat',color:'#f91942'}}>ABOUT,</Typography>
+         <Typography className="revealUp"  sx={{ fontSize: '20px', fontFamily: 'Montserrat',color:'#666',overflow:'hidden', fontWeight: '400', textAlign: 'start' }}><span style={{ fontSize: '25px', fontWeight: '900', fontFamily: 'Montserrat' }}>CODESINTENSITY</span> is to revolutionize the digital landscape by providing innovative solutions that empower businesses to thrive in the modern world. We are committed to leveraging our expertise in web development, design, and digital marketing to deliver cutting-edge solutions tailored to meet the unique needs of each of our clients.</Typography>
         </Box>  
        </Box>
-       <Box sx={{display:'flex',flexDirection:'row',marginTop:'30px'}}>
-       <Box>
+       <Box sx={{display:'flex',flexDirection:'row',marginTop:'30px',overflow:'hidden'}}>
+       <Box className="revealUp">
         <Typography style={{ fontSize:isMobileView?"35px":"40px", fontWeight: '900', fontFamily: 'Montserrat',color:'#f91942' }}>MISSION & STORY,</Typography>
         <Typography sx={{ fontSize: '20px', fontFamily: 'Montserrat',color:'#666', fontWeight: '400', textAlign: 'start' }}> at <span style={{ fontSize: '25px', fontWeight: '900', fontFamily: 'Montserrat' }}>CODESINTENSITY</span> is to revolutionize the digital landscape by providing innovative solutions that empower businesses to thrive in the modern world. We are committed to leveraging our expertise in web development, design, and digital marketing to deliver cutting-edge solutions tailored to meet the unique needs of each of our clients</Typography>
        </Box>  
       </Box>
-      <Box sx={{ marginTop:'30px', display: 'flex', width: '100%', flexDirection: 'column',}}>
+      <Box className="revealUp" sx={{ marginTop:'30px', display: 'flex', width: '100%', flexDirection: 'column',overflow:'hidden'}}>
       <Typography style={{ fontSize: '40px', fontWeight: '900', fontFamily: 'Montserrat',color:'#f91942' }}>FAQs,</Typography>
-      <section className="bg-dark" style={{ backgroundColor: 'black', color: '#666', display: 'flex', width: '100%', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' , padding:'1px'}}>
-      <div className="container" style={{backgroundColor:'black'}}>
+      <section  style={{  color: '#666', display: 'flex', width: '100%', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <div className="container" style={{backgroundColor:'black',borderRadius:'20px',border:'1px solid #666'}}>
           <div className="" style={{Color:'black',backgroundColor:'black'}}>
 
-            <div  style={{backgroundColor:'black',padding:'10px'}}>
+            <div  style={{backgroundColor:'black'}}>
               <h2 className="h3 mb-2" style={{lineHeight:'40px'}}>How can we help you?</h2>
               <p >We hope you have found an answer to your question. If you need any help, please search your query on our Support Center or contact us via email.</p>
               <div style={{border:'1px solid white'}} className="accordion accordion-flush"  id="accordionExample" >

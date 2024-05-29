@@ -39,11 +39,11 @@ const Footer = () => {
           {data.map(item => (
             <Grid item key={item.id} xs={6} sm={6} md={3} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
               <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
-                <Typography variant="h4" sx={{ color: '#666', fontWeight: '900', maxWidth: '600px', margin: '10px' }}>{item.title}</Typography>
+                <Typography sx={{fontSize:isMobileView?'22px':"30px", color: '#666', fontWeight: '900', maxWidth: '600px', margin: '10px' }}>{item.title}</Typography>
                 <Divider orientation='horizontal' sx={{ width: '100%', color: 'white', height: '1px', border: '1px solid white' }} />
                 {item.links.map((link, index) => (
                   <Link key={index} to={link.path}>
-                    <Typography variant="h6" sx={{ maxWidth: '200px', color: '#666', cursor: 'pointer', transition: 'color 0.1s, transform 0.3s', '&:hover': { color: 'red', transform: 'scale(1.01)' }, textAlign: 'center' }}>{link.name}</Typography>
+                    <Typography  sx={{fontSize:isMobileView?'17px':"20px", maxWidth: '200px', color: '#666', cursor: 'pointer', transition: 'color 0.1s, transform 0.3s', '&:hover': { color: 'red', transform: 'scale(1.01)' }, textAlign: 'center',fontWeight:'500' }}>{link.name}</Typography>
                   </Link>
                 ))}
               </Box>

@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import { Box, Button, TextField } from '@mui/material';
+import { Box, Button, InputAdornment, TextField, useMediaQuery, useTheme } from '@mui/material';
+import mail from "../Contact/mail.webp"
+import user from "../Contact/user.webp"
+import phone from "../Contact/phone.webp"
+import company from "../Contact/company.webp"
+import PersonIcon from '@mui/icons-material/Person';
 
 const Form = () => {
-  
+    const theme=useTheme();
+    const isMobileView=useMediaQuery(theme.breakpoints.down("sm"))
+
     const [contactDetails, setContactDetails] = useState({
         name: '',
         email: '',
         mobileNo: '',
-        place: ''
+        message: ''
     });
 
     const handleChange = (event) => {
@@ -26,44 +33,110 @@ const Form = () => {
     };
 
     return (
-        <Box sx={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:"center"}}>
-            <form style={{display:'flex',flexDirection:'column' ,alignItems:'center',justifyContent:'center'}} onSubmit={handleSubmit}> {/* Add onSubmit handler to the form */}
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: "center" }}>
+            <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} onSubmit={handleSubmit}> {/* Add onSubmit handler to the form */}
                 <TextField
-                    style={{width:'350px',height:'auto',borderRadius:'3px',margin:'20px',color:'white',backgroundColor:'white'}}
+                    sx={{
+                        width:isMobileView?"350px":"550px", height: 'auto',
+                        borderRadius: '3px',
+                        margin: '10px',
+                        backgroundColor: '#efefef',
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: 'transparent', // default border color
+                            },
+                            '&:hover fieldset': {
+                                borderColor: 'transparent', // border color on hover
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: 'transparent', // border color on focus
+                            },
+                        },
+                        '& .MuiInputBase-input': {
+                            color: 'black', // text color
+                        },
+                    }}
+                    variant="outlined"
                     name="name"
                     value={contactDetails.name}
-                    onChange={handleChange}  
-                    placeholder='Name'
+                    onChange={handleChange}
+                    placeholder="Name"
+                    InputProps={{
+                        style: {
+                          border: 'none',
+                          borderRadius: '3px',
+                        },
+                      }}
                 />
 
                 <TextField
-                    sx={{width:'350px',height:'auto',borderRadius:'3px',margin:'20px',backgroundColor:'white'}}
+                    sx={{width:isMobileView?"350px":"550px", height: 'auto', borderRadius: '3px', margin: '10px', backgroundColor: '#efefef' , '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                            borderColor: 'transparent', // default border color
+                        },
+                        '&:hover fieldset': {
+                            borderColor: 'transparent', // border color on hover
+                        },
+                        '&.Mui-focused fieldset': {
+                            borderColor: 'transparent', // border color on focus
+                        },
+                    },
+                    '& .MuiInputBase-input': {
+                        color: 'black', // text color
+                    },}}
                     name="email"
                     value={contactDetails.email}
-                    onChange={handleChange}  
+                    onChange={handleChange}
                     placeholder='Email'
                 />
 
                 <TextField
-                    style={{width:'350px',height:'auto',borderRadius:'3px',margin:'20px',backgroundColor:'white'}}
+                    sx={{ width:isMobileView?"350px":"550px", height: 'auto',borderRadius: '3px', margin: '10px', backgroundColor: '#efefef', '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                            borderColor: 'transparent', // default border color
+                        },
+                        '&:hover fieldset': {
+                            borderColor: 'transparent', // border color on hover
+                        },
+                        '&.Mui-focused fieldset': {
+                            borderColor: 'transparent', // border color on focus
+                        },
+                    },
+                    '& .MuiInputBase-input': {
+                        color: 'black', // text color
+                    }, }}
                     name="mobileNo"
                     placeholder='Mobile No'
                     value={contactDetails.mobileNo}
                     onChange={handleChange}
-                />  
+                />
 
                 <TextField
-                    name="place"
-                    placeholder='Place'
+                    name="message"
+                    placeholder='Message'
                     value={contactDetails.place}
                     onChange={handleChange}
                     sx={{
-                        width: '350px',height:'auto',
-                        borderRadius: '3px',margin:'20px',
-                        backgroundColor:'white'
+                        width:isMobileView?"350px":"550px", height: '100px',
+                        borderRadius: '3px', margin: '10px',
+                        backgroundColor: '#efefef',
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: 'transparent', // default border color
+                            },
+                            '&:hover fieldset': {
+                                borderColor: 'transparent', // border color on hover
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: 'transparent', // border color on focus
+                            },
+                        },
+                        '& .MuiInputBase-input': {
+                            color: 'black', // text color
+                        },
                     }}
                 />
-                <Button type="submit" variant='contained' sx={{backgroundColor:"#f91942",width:'200px'}}>Submit</Button>
+                <Button type="submit" variant='contained' sx={{ backgroundColor: "#f91942", width: '100%' }}>Submit</Button>
             </form>
         </Box>
     );

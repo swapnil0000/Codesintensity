@@ -122,25 +122,7 @@ const Graphic = () => {
                     </Box>
                 </Paper>
             </Box>
-            <Container sx={{ width: '100%', height: 'auto' , marginBottom:'30px',backgroundColor:'black'}}>
-            <Typography sx={{ fontSize: isMobileView ? "30px" : "50px", fontWeight: '900', color: 'white', textAlign: 'center', margin: '20px' }}>Some work on <span style={{ color: '#f91942' }}>Figma</span> </Typography>
-
-            <Paper elevation={1} sx={{ width: '100%', height: 'auto',backgroundColor:'black' }}>
-            <Box >
-                <Grid container >
-                    {figmas.map(item => (
-                        <Grid sx={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center' }} key={item.id} item xs={12} sm={12} md={6} lg={4}>
-
-                            <Paper sx={{ width: '400px', height: "300px", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#141415', gap: '20px', margin: '20px' ,borderRadius:'20px'}}>
-
-                                <img style={{ width: '100%', height: '100%', backgroundColor: 'transparent' }} src={item.img} alt={`Image ${item.id}`} />
-                            </Paper>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Box>
-        </Paper>
-            </Container>
+           
             <Divider orientation='horizontal' sx={{ border: '0.5px solid white', width: '100%' }} />
 
             <Container>

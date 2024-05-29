@@ -6,9 +6,9 @@ const Services = () => {
     const data = [
         {
             id: 1,
-            img: "/assets/webhostinglong.webp",
-            path:'/hosting',
-            tittle: 'Domain and Hosting',
+            img: "/assets/uiux.webp",
+            path:'/uiux',
+            tittle:'UI & UX',
             des: 'Domain & hosting services to host your website at the top.'
         },
         {

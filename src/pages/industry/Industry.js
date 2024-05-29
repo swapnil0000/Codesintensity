@@ -39,7 +39,7 @@ const Industry = () => {
         },
         {
             id: 6,
-            img: "/assets/travel.webpeducation.webp",
+            img: "/assets/education.webp",
             path:'/graphic',
             tittle: 'Educational',
             des: 'Designing logos, and other media to build the brand identity.'
@@ -56,7 +56,7 @@ const Industry = () => {
                         <Grid item key={index} lg={4} md={4} sm={6} xs={12}>
                             <Box sx={{ height: '300px', backgroundColor: 'darkcyan', margin: '10px',border:'none', transition: 'transform 0.3s ease-in-out' , '&:hover': { transform: 'scale(1.05)' }}}>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
-                                    <img style={{ width: '100%', height: '250px', transition: 'transform 0.3s ease-in-out' }} src={ele.img} alt={ele.tittle} />
+                                    <img style={{ width: '100%', height: '85%', transition: 'transform 0.3s ease-in-out',objectFit:'cover' }} src={ele.img} alt={ele.tittle} />
                                     <Typography sx={{ fontSize: '23px', fontWeight: '600', color: 'whitesmoke', fontFamily: 'Montserrat', marginTop: '10px', textAlign: 'center' }}>{ele.tittle}</Typography>
                                 </Box>
                             </Box>

@@ -46,9 +46,9 @@ export default function Header() {
   const data = [
     {
       id: 1,
-      img: hosting,
-      tittle: 'Domain and Hosting',
-      path:'/hosting',
+      img:"/assets/uiuxlogo.webp",
+      tittle: 'UI & UX',
+      path:'/uiux',
       des: 'Domain & hosting services to host your website at the top.'
     },
     {
@@ -133,11 +133,11 @@ export default function Header() {
             anchor="top"
             open={openMenu}
             onClose={handleClose}
-            sx={{ width: '50vw', "& .MuiPaper-root": { width: '100vw',height:'450px' } }} // Set width to full viewport width
+            sx={{ width: '50vw', "& .MuiPaper-root": { width: '100%',height:'310px' } }} // Set width to full viewport width
           >
             <Box sx={{ display: 'flex', justifyContent: 'flex-end',backgroundColor:'#212529' }}>
-              <IconButton onClick={handleClose} sx={{ color: 'white',fontSize:'30px',fontWeight:'900' }}>
-                <CloseIcon  sx={{fontSize:'40px',fontWeight:'600',marginTop:'4px'}}/> {/* Assume CloseIcon is imported */}
+              <IconButton onClick={handleClose} sx={{ color: 'white',fontSize:'25px',fontWeight:'900' }}>
+                <CloseIcon  sx={{fontSize:'30px',fontWeight:'600',margin:'4px'}}/> {/* Assume CloseIcon is imported */}
               </IconButton>
             </Box>
 
@@ -145,21 +145,23 @@ export default function Header() {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
+                width:'100%',
+                alignItems:'center',
                 justifyContent: 'center', // Center items vertically
                // Center items horizontally
-                height: '55vh', // Set height to full viewport height
+                height: '40vh', // Set height to full viewport height
                 backgroundColor: '#212529',
-                padding: '0', // Remove default padding
               }}
             >
 
-              <Link onClick={handleClose} style={{  fontSize: '30px',textDecoration:'none',color:'white',fontWeight: '400' }} to="/">Home</Link>
-              <Divider orientation='horizontal' sx={{width:'50%',color:'orange',height:'3px',border:'1px solid white',marginBottom: '10px',}}/>
+              <Typography onClick={handleClose} sx={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight: '500',lineHeight:'0px',padding:'20px' }} >Home</Typography>
+
+              <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
 
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <Typography
                 id="basic-button"
-                sx={{ fontSize: '30px', cursor: 'pointer', color: 'white', fontWeight: '400' }}
+                sx={{ fontSize: '25px', cursor: 'pointer', color: 'white', fontWeight: '500' }}
                 aria-controls={openMenuTable ? 'basic-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={openMenuTable ? 'true' : undefined}
@@ -225,14 +227,17 @@ export default function Header() {
                 ))}
               </Menu>
             </div> 
-        <Divider orientation='horizontal' sx={{width:'50%',color:'white',height:'3px',border:'1px solid white',marginBottom: '10px',}}/>
-        <Link onClick={handleClose} style={{  fontSize: '30px',textDecoration:'none',color:'white',fontWeight:'400' }} to="/about">About</Link>   
-        <Divider orientation='horizontal' sx={{width:'50%',color:'white',height:'3px',border:'1px solid white',marginBottom: '10px',}}/>
+        <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
+        <Link onClick={handleClose} style={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight:'500' }} to="/about">About</Link>   
+        <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
 
        
 
 
-              <Link onClick={handleClose} style={{  fontSize: '30px',textDecoration:'none',color:'white',fontWeight:'400' }} to="/contact">Contact</Link>
+              <Link onClick={handleClose} style={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight:'500' }} to="/contact">Contact</Link>
+              <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
+              <Link onClick={handleClose} style={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight:'500' }} to="/industry">Industries</Link>
+
 
               {/* Add more menu items as needed */}
             </List>
@@ -258,7 +263,7 @@ export default function Header() {
 
 
             <IconButton color="inherit" aria-label="menu" onClick={handleMenuClick}>
-              {openMenu ? <CloseIcon /> : <MenuIcon sx={{color:'black',fontSize:'40px',fontWeight:'900'}}/>}
+              {openMenu ? <CloseIcon /> : <MenuIcon sx={{color:'black',fontSize:'25px',fontWeight:'900'}}/>}
             </IconButton>
           </Box>
         </Toolbar>
