@@ -1,6 +1,11 @@
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import "../choose/choose.css"
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
 const Choose = () => {
   const theme=useTheme();
   const isMobileView=useMediaQuery(theme.breakpoints.down('md'));
@@ -10,7 +15,7 @@ const Choose = () => {
     <div class="container">
       <div class="row">
         <div class="section-head col-sm-12">
-          <h4 style={{fontSize:isMobileView?"40px":"60px"}}><span>Why Choose</span> Us?</h4>
+          <h4 style={{fontSize:isMobileView?"30px":"60px"}}><span>Why Choose</span> Us?</h4>
           <p>When you choose us, you'll feel the benefit of 10 years' experience of Web Development. Because we know the digital world and we know that how to handle it. With working knowledge of online, SEO and social media.</p>
         </div>
         <div class="col-lg-4 col-sm-6">

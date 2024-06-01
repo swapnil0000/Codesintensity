@@ -19,6 +19,11 @@ import marketing from "../Header/assetsmenu/marketing.png"
 import maintain from "../Header/assetsmenu/maintainence.png"
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import graphic from "../Header/assetsmenu/design.png"
+import HomeIcon from '@mui/icons-material/Home';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import InfoIcon from '@mui/icons-material/Info';
+import ContactsIcon from '@mui/icons-material/Contacts';
+import FactoryIcon from '@mui/icons-material/Factory';
 
 
 
@@ -47,7 +52,7 @@ export default function Header() {
     {
       id: 1,
       img:"/assets/uiuxlogo.webp",
-      tittle: 'UI & UX',
+      tittle: 'UI & UX Design',
       path:'/uiux',
       des: 'Domain & hosting services to host your website at the top.'
     },
@@ -123,6 +128,12 @@ export default function Header() {
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleMenu=(url)=>{
+    navigate(url)
+    setOpenMenu(!openMenu)
+
+  }
+
  
   return (
     <>
@@ -133,11 +144,12 @@ export default function Header() {
             anchor="top"
             open={openMenu}
             onClose={handleClose}
-            sx={{ width: '50vw', "& .MuiPaper-root": { width: '100%',height:'310px' } }} // Set width to full viewport width
+            sx={{ width: '50vw', "& .MuiPaper-root": { width: '100%',height:'400px' } }} // Set width to full viewport width
           >
             <Box sx={{ display: 'flex', justifyContent: 'flex-end',backgroundColor:'#212529' }}>
               <IconButton onClick={handleClose} sx={{ color: 'white',fontSize:'25px',fontWeight:'900' }}>
-                <CloseIcon  sx={{fontSize:'30px',fontWeight:'600',margin:'4px'}}/> {/* Assume CloseIcon is imported */}
+                <CloseIcon  sx={{fontSize:'30px',
+                fontWeight:'600',margin:'4px'}}/> {/* Assume CloseIcon is imported */}
               </IconButton>
             </Box>
 
@@ -149,26 +161,27 @@ export default function Header() {
                 alignItems:'center',
                 justifyContent: 'center', // Center items vertically
                // Center items horizontally
-                height: '40vh', // Set height to full viewport height
+                height: '60vh', // Set height to full viewport height
                 backgroundColor: '#212529',
               }}
             >
 
-              <Typography onClick={handleClose} sx={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight: '500',lineHeight:'0px',padding:'20px' }} >Home</Typography>
+              <Typography onClick={()=>{handleMenu('/')}} sx={{  fontSize: '25px',textDecoration:'none',color:'#666',fontWeight: '500',margin:'10px',fontFamily:'sans-serif',display:'flex',alignItems:'center',gap:'5px'}} ><HomeIcon/> Home</Typography>
+              <Divider sx={{color:'white',width:'50%',border:'1px solid white'}}/>
 
-              <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
 
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <Typography
                 id="basic-button"
-                sx={{ fontSize: '25px', cursor: 'pointer', color: 'white', fontWeight: '500' }}
+                sx={{ fontSize: '25px', cursor: 'pointer', color: '#666', fontWeight: '500',textAlign:'center',margin:'10px' ,fontFamily:'sans-serif',display:'flex',alignItems:'center',gap:'5px' }}
                 aria-controls={openMenuTable ? 'basic-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={openMenuTable ? 'true' : undefined}
                 onClick={handleClick}
               >
+              <DesignServicesIcon/>
                 Services
-                <ExpandMoreIcon sx={{ color: 'white' }} />
+                <ExpandMoreIcon sx={{ color: '#666' }} />
               </Typography>
               <Menu
                 id="basic-menu"
@@ -194,6 +207,7 @@ export default function Header() {
                 </IconButton>
               </Box>
 
+
               <Box>
   
                   <Typography sx={{ color: 'white', fontSize: '20px', fontWeight: '900', fontFamily: 'montserrat', cursor: 'pointer' }}>Services</Typography>
@@ -211,12 +225,12 @@ export default function Header() {
                     <Grid container spacing={1}>
                       {group.map(item => (
                         <Grid item xs={12} sm={4} key={item.id}>
-                          <Box sx={{ width: '100%', height: '130px', backgroundColor: 'black', display: 'flex', flexDirection: 'column' ,alignItems:'center',justifyContent:'center'}}>
-                            <Box onClick={()=>handleMenuTask(item.path)}  sx={{ display: 'flex', flexDirection: 'row','&:hover': {
+                          <Box sx={{ width: '100%', height: '130px', backgroundColor: 'black', display: 'flex', flexDirection: 'column' ,alignItems:'center',justifyContent:'space-around'}}>
+                            <Box onClick={()=>handleMenuTask(item.path)}  sx={{ display: 'flex', flexDirection: 'row', '&:hover': {
                               transform: 'scale(1.1)', /* Zoom effect */
                             },    transition: 'transform 0.3s ease',
-                            alignItems: 'center', justifyContent: 'space-around', width: '100%' }}>
-                              <img style={{ width: '80px', marginLeft: '20px', marginTop: '10px',height:'auto' }} src={item.img} />
+                            alignItems: 'center', justifyContent: 'space-evenly', width: '100%' }}>
+                              <img style={{ width: '80px', marginTop: '10px',height:'auto' }} src={item.img} />
                               <Typography sx={{ color: 'white', fontWeight: '900' }}>{item.tittle}</Typography>
                             </Box>
                           </Box>
@@ -227,16 +241,17 @@ export default function Header() {
                 ))}
               </Menu>
             </div> 
-        <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
-        <Link onClick={handleClose} style={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight:'500' }} to="/about">About</Link>   
-        <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
+            <Divider sx={{color:'white',width:'50%',border:'1px solid white'}}/>
 
-       
+        <Typography sx={{ fontSize: '25px', cursor: 'pointer', color: '#666',margin:'10px', fontWeight: '500',fontFamily:'sans-serif',display:'flex',alignItems:'center',gap:'5px' }} onClick={()=>{handleMenu('/about')}}><InfoIcon/> About</Typography>
+        <Divider sx={{color:'white',width:'50%',border:'1px solid white'}}/>
 
+        <Typography sx={{ fontSize: '25px', cursor: 'pointer', color: '#666',margin:'10px', fontWeight: '500',fontFamily:'sans-serif',display:'flex',alignItems:'center',gap:'5px' }} onClick={()=>{handleMenu('/industry')}}><FactoryIcon/>Industries</Typography>
+        <Divider sx={{color:'white',width:'50%',border:'1px solid white'}}/>
 
-              <Link onClick={handleClose} style={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight:'500' }} to="/contact">Contact</Link>
-              <Divider orientation='horizontal' sx={{width:'90%',color:'orange',height:'1px',border:'1px solid white',marginBottom: '10px',}}/>
-              <Link onClick={handleClose} style={{  fontSize: '25px',textDecoration:'none',color:'white',fontWeight:'500' }} to="/industry">Industries</Link>
+        
+
+        <Typography sx={{ fontSize: '25px', cursor: 'pointer', color: '#666',margin:'10px', fontWeight: '500',fontFamily:'sans-serif',display:'flex',alignItems:'center',gap:'5px' }} onClick={()=>{handleMenu('/contact')}}><ContactsIcon/>Contact</Typography>
 
 
               {/* Add more menu items as needed */}
@@ -340,11 +355,11 @@ export default function Header() {
               </div>
                 
                
-                <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600' }} onClick={()=>navigate('/about')}>About</Typography>
-                <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600' }} onClick={()=>navigate('/industry')}>Industries</Typography>
+                <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600',display:'flex',alignItems:'center',gap:'5px' }} onClick={()=>navigate('/about')}>About</Typography>
+                <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600',display:'flex',alignItems:'center',gap:'5px' }} onClick={()=>navigate('/industry')}>Industries</Typography>
 
 
-                <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600' }} onClick={()=>navigate('/contact')}>Contact</Typography>
+                <Typography sx={{ fontSize: '20px', cursor: 'pointer', color: '#4A455E', fontWeight: '600',display:'flex',alignItems:'center',gap:'5px' }} onClick={()=>navigate('/contact')}>Contact</Typography>
 
             </Box>
 

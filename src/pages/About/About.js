@@ -74,7 +74,7 @@ const About = () => {
       <Box className="revealUp" sx={{ marginTop:'30px', display: 'flex', width: '100%', flexDirection: 'column',overflow:'hidden'}}>
       <Typography style={{ fontSize: '40px', fontWeight: '900', fontFamily: 'Montserrat',color:'#f91942' }}>FAQs,</Typography>
       <section  style={{  color: '#666', display: 'flex', width: '100%', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <div className="container" style={{backgroundColor:'black',borderRadius:'20px',border:'1px solid #666'}}>
+      <div className="container" style={{backgroundColor:'black',borderRadius:'20px',border:'1px solid #666',padding:'20px'}}>
           <div className="" style={{Color:'black',backgroundColor:'black'}}>
 
             <div  style={{backgroundColor:'black'}}>

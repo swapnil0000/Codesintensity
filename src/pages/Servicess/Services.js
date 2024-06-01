@@ -62,7 +62,7 @@ const Services = () => {
     return (
         <Box sx={{  width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',marginTop:isMobileView?"100px":"0px"
          }}>
-            <Typography sx={{ fontSize: '50px', fontWeight: '900', fontFamily: 'Montserrat' }}>Our <span style={{ color: '#f91942' }}>Services</span> </Typography>
+            <Typography sx={{ fontSize:isMobileView?"40px":'50px', fontWeight: '900', fontFamily: 'Montserrat' }}>Our <span style={{ color: '#f91942' }}>Services</span> </Typography>
             <Container>
                 <Grid container spacing={3}>
                     {data.map((ele, index) => (

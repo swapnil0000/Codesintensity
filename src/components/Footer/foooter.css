@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #898b96;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  
+  font-size: 50px;
+  font-weight: 900;
+ 
+  color: #333;
+}
+
+a {
+  color: #333;
+}
+
+.footer-big {
+  padding: 90px 0 65px 0;
+}
+
+.footer-big .footer-widget {
+  margin-bottom: 10px;
+}
+
+.footer--light {
+  background: #151922;
+}
+
+.footer-big .footer-menu ul li a,
+.footer-big p,
+.footer-big ul li {
+  color: #898b96;
+}
+
+/* Responsive Css Code created by : Shift Code Design */
+
+.footer-menu {
+  padding-left: 48px;
+}
+
+.footer-menu ul li a {
+  font-size: 18px;
+  line-height: 32px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-menu ul li a:hover {
+  color: #ce1a19;
+}
+
+.footer-widget-title {
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mini-footer {
+  background: #333;
+  text-align: center;
+  padding: 32px 0;
+}
+
+.mini-footer p {
+  margin: 0;
+  line-height: 20px;
+  font-size: 16px;
+  color: #999;
+}
+
+.mini-footer p a {
+  color: #ce1a19;
+  font-weight: 500;
+}
+
+.mini-footer p a:hover {
+  color: #34bfa3;
+}
+
+/* Responsive Css Code created by : Shift Code Design */
+
+.widget-about img {
+  display: block;
+  margin-bottom: 30px;
+  max-width: 70%;
+}
+
+.widget-about p {
+  font-weight: 400;
+}
+
+.widget-about .contact-details {
+  margin: 30px 0 0 0;
+}
+
+.widget-about .contact-details li {
+  margin-bottom: 10px;
+}
+
+.widget-about .contact-details li:last-child {
+  margin-bottom: 0;
+}
+
+.widget-about .contact-details li i {
+  padding-right: 10px;
+  color: #333;
+}
+
+.widget-about .contact-details li a {
+  color: #24252b;
+}
+
+/* Responsive Css Code created by : Shift Code Design */
+
+@media (max-width: 991px) {
+  .footer-menu {
+    padding-left: 0;
+  }
+  .widget-about img {
+    max-width: 30%;
+  }
+}

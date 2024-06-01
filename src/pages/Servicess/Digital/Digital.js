@@ -50,12 +50,11 @@ const Digital = () => {
     }, [pathname]);
     return (
         <Box sx={{ marginTop: isMobileView ? "100px" : "", backgroundColor: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Typography sx={{ fontSize: isMobileView ? "30px" : "50px", fontWeight: '900', color: '#666', textAlign: 'center', margin: '20px',fontFamily: 'montserrat' }}>Digital <span style={{ color: '#f91942' }}>Marketing</span> </Typography>
-            <Typography sx={{ fontSize: isMobileView ? "20px" : "30px", fontWeight: '400', color: '#666', textAlign: 'center' }}>Unlock digital pontential, one code at a time!</Typography>
 
-            <Container sx={{ display: 'flex', flexDirection: isMobileView ? "column" : "row", alignItems: 'center', justifyContent: "space-between", width: '100%', margin: '10px' }}>
+
+            <Container sx={{ display: 'flex', flexDirection: isMobileView ? "column" : "row", alignItems: 'center', justifyContent: "space-around", width: '100%', margin: '10px' }}>
             <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', padding: '10px' }}>
-                <Typography sx={{ color: 'white', fontSize: isMobileView ? '25px' : "35px", textAlign: isMobileView ? "center" : "start" ,fontWeight:'700'}}>Unleash Your Brand's Potential: Dominate the Digital Landscape with Our <span style={{ color: '#f91942' }}>Marketing Solutions!</span></Typography>
+                <Typography sx={{ color: 'white', fontSize: isMobileView ? '20px' : "35px", textAlign: isMobileView ? "center" : "start" ,fontWeight:'700'}}>Unleash Your Brand's Potential: Dominate the Digital Landscape with Our <span style={{ color: '#f91942' }}>Marketing Solutions!</span></Typography>
                 <Typography sx={{ color: 'white', fontSize: isMobileView ? "16px" : '17px', maxWidth: '800px', marginTop: '0px', hyphens: 'auto', textAlign: isMobileView ? "center" : "start" }}>
                 Digital marketing allows companies to reach a global audience without geographical limitations. Through various online channels such as websites, social media platforms, search engines, and email, businesses can connect with potential customers anywhere in the world.                </Typography>
             </Box>

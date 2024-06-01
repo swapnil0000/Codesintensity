@@ -136,7 +136,7 @@ const Form = () => {
                         },
                     }}
                 />
-                <Button type="submit" variant='contained' sx={{ backgroundColor: "#f91942", width: '100%' }}>Submit</Button>
+                <Button type="submit" variant='contained' sx={{ backgroundColor: "#f91942", width: '60%' }}>Submit</Button>
             </form>
         </Box>
     );

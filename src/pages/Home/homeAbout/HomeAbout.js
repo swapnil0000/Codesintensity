@@ -2,6 +2,11 @@ import { Box, Button, Container, Typography, useMediaQuery, useTheme } from '@mu
 import React, { useRef, useEffect } from 'react';
 import "../homeAbout/homeabout.css";
 import {  useNavigate } from 'react-router-dom';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
 
 const HomeAbout = () => {
   const componentRef = useRef(null);
@@ -32,6 +37,25 @@ const HomeAbout = () => {
   const navigate=useNavigate();
   const theme=useTheme();
   const isMobileView=useMediaQuery(theme.breakpoints.down('md'))
+  const CounterBox = ({ icon, count, label }) => {
+  
+    return (
+      <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '30px', width: '100%', height: '100%', marginBottom: isMobileView ? '5px' : '0px', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.2)' } }}>
+        {icon}
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Typography sx={{ fontSize: isMobileView ? '15px' : '17px' }}>{label}</Typography>
+        </Box>
+      </Box>
+    );
+  };
+
+  const DividerBox = () => {
+  
+    return (
+      <Box sx={{ width: isMobileView ? '100%' : '3px', height: isMobileView ? '4px' : '100%', backgroundColor: 'white', borderRight: '3px solid white' }} />
+    );
+  };
+
 
   return (
     <Container ref={componentRef}>
@@ -50,6 +74,15 @@ const HomeAbout = () => {
           <Typography sx={{textAlign:'start'}} className="button-text">Learn More</Typography>
         </button>
         </Box>
+      </Box>
+      <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+      <Box sx={{marginTop: '20px', display: 'flex', flexDirection: isMobileView ? 'column' : 'row', backgroundColor: '#212529', color: 'white', width: '70%', height: isMobileView ? '350px' : '110px', borderRadius: '30px', alignItems: 'center', justifyContent: 'center',margin:'20px',overflow:'hidden',lineHeight:'0px'}}>
+      <CounterBox icon={<XIcon sx={{ fontSize: '50px', fontWeight: '700' }} />} label='Twitter' />
+      <DividerBox />
+      <CounterBox icon={<InstagramIcon sx={{ fontSize: '50px', fontWeight: '700' }} />} label= 'Instagram'  />
+      <DividerBox />
+      <CounterBox icon={<LinkedInIcon sx={{ fontSize: '50px', fontWeight: '700' }} />}  label= 'Linkedln'  />
+      </Box>
       </Box>
     </Container>
   );
