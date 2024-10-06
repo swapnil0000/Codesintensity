@@ -1,18 +1,13 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
-import Slide from '@mui/material/Slide';
 import { Button, Divider, Drawer, Grid, IconButton, List, Menu, MenuItem, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
 import CallIcon from '@mui/icons-material/Call';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import hosting from "../Header/assetsmenu/hosting.png"
 import web from "../Header/assetsmenu/webdevelopment.png"
 import app from "../Header/assetsmenu/appdevelopment.png"
 import marketing from "../Header/assetsmenu/marketing.png"
@@ -24,6 +19,8 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import FactoryIcon from '@mui/icons-material/Factory';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Chat from '../Chat';
 
 
 

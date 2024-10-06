@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Grid, Typography, Container, Button, CardMedia, CardActions, useMediaQuery, useTheme } from '@mui/material';
 import {useNavigate} from "react-router-dom"
+import { featuredData } from '../../../data/data';
 const Feature = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage card open/close
 
@@ -11,30 +12,6 @@ const Feature = () => {
   const navigate=useNavigate()
 
 
-  const data=[
-    {
-      id:1,
-      img:"/assets/web.webp",
-      path:'/web',
-      tittle:'Web Development',
-      des:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
-    },
-    {
-      id:2,
-      img:"/assets/hostinghome.webp",
-      path:'/hosting',
-      tittle:'Domain & Hosting',
-      des:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
-    },
-    {
-      id:3,
-      img:"/assets/appdevelopment.webp",
-      path:'/app',
-      tittle:'App Development',
-      des:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
-    },
-  
-  ]
 
   const theme=useTheme();
   const isMobileView=useMediaQuery(theme.breakpoints.down('md'))
@@ -45,9 +22,9 @@ const Feature = () => {
     <Typography sx={{fontSize:isMobileView?"35px":"50px",fontWeight:'900',color:'white',textAlign:'center',marginTop:'30px'}}>Features Provided</Typography>
       <Container maxWidth="lg" sx={{marginTop:'20px'}}>
         <Grid container spacing={3}>
-          {data.map((item) => (
+          {featuredData.map((item) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={item} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-            <Card sx={{ maxWidth: 345 , borderRadius:'10px',backgroundColor:'black'}}>
+            <Card sx={{ maxWidth: 345 , borderRadius:'10px',backgroundColor:'#222'}}>
             <CardMedia
               sx={{ height: 160 }}
               image={item.img}
